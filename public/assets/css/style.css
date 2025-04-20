@@ -1,0 +1,62 @@
+:root {
+    --primary: #09283c;
+    --secondary: #6c837c;
+    --background: #cfdebd;
+    --gris: #98989a;
+    --gris-bg: #6f7271;
+}
+
+body {
+    background-color: var(--background);
+}
+
+/**
+ * ============================================
+ * From Uiverse.io by bernethe
+ * ============================================
+*/
+.loader-circle {
+    border-radius: 50%;
+    border-top: 16px var(--primary) solid;
+    border-left: 16px var(--secondary) solid;
+    border-bottom: 16px var(--secondary) solid;
+    border-right: 16px var(--secondary) solid;
+    animation: spSlices 1s infinite linear;
+}
+
+@keyframes spSlices {
+    0% {
+        border-top: 16px var(--primary) solid;
+        border-right: 16px var(--secondary) solid;
+        border-bottom: 16px var(--secondary) solid;
+        border-left: 16px var(--secondary) solid;
+    }
+
+    25% {
+        border-top: 16px var(--secondary) solid;
+        border-right: 16px var(--primary) solid;
+        border-bottom: 16px var(--secondary) solid;
+        border-left: 16px var(--secondary) solid;
+    }
+
+    50% {
+        border-top: 16px var(--secondary) solid;
+        border-right: 16px var(--secondary) solid;
+        border-bottom: 16px var(--primary) solid;
+        border-left: 16px var(--secondary) solid;
+    }
+
+    75% {
+        border-top: 16px var(--secondary) solid;
+        border-right: 16px var(--secondary) solid;
+        border-bottom: 16px var(--secondary) solid;
+        border-left: 16px var(--primary) solid;
+    }
+
+    100% {
+        border-top: 16px var(--primary) solid;
+        border-right: 16px var(--secondary) solid;
+        border-bottom: 16px var(--secondary) solid;
+        border-left: 16px var(--secondary) solid;
+    }
+}
