@@ -1,0 +1,7 @@
+Options All -Indexes
+
+RewriteEngine on
+RewriteBase /finanzas-personales
+RewriteRule ^$ inicio/ [R=301,L]
+RewriteRule ^src/(.*)$ inicio/ [R=301,L]
+RewriteRule ^([a-zA-Z0-9/-]+)$ public/index.html#$1
