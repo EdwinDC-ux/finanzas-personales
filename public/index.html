@@ -11,12 +11,12 @@
     <title>Gestor de Ingresos y Gastos</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/finanzas-personales/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- JQuery-Confirm -->
-    <link rel="stylesheet" href="/node_modules/jquery-confirm/dist/jquery-confirm.min.css">
+    <link rel="stylesheet" href="/finanzas-personales/node_modules/jquery-confirm/dist/jquery-confirm.min.css">
     <!-- DataTable -->
-    <link rel="stylesheet" href="/node_modules/datatables.net-dt/css/dataTables.dataTables.min.css">
-    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/finanzas-personales/node_modules/datatables.net-dt/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="/finanzas-personales/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <!-- Custom css -->
     <link rel="stylesheet" href="/finanzas-personales/public/assets/css/style.css">
 </head>
@@ -29,25 +29,25 @@
     <img src="/finanzas-personales/public/assets/images/personal-finance.png" alt="" style="width: auto; height: 100vh;">
 
     <!-- JQuery -->
-    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/finanzas-personales/node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/finanzas-personales/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/finanzas-personales/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- JQuery-Confirm -->
-    <script src="/node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+    <script src="/finanzas-personales/node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
     <!-- DataTable -->
-    <script src="/node_modules/datatables.net/js/dataTables.min.js"></script>
+    <script src="/finanzas-personales/node_modules/datatables.net/js/dataTables.min.js"></script>
     <!-- JS-Render -->
-    <script src="/node_modules/jsrender/jsrender.min.js"></script>
+    <script src="/finanzas-personales/node_modules/jsrender/jsrender.min.js"></script>
     <!-- Chart JS -->
-    <script src="/node_modules/chart.js/dist/chart.js"></script>
+    <script src="/finanzas-personales/node_modules/chart.js/dist/chart.umd.js"></script>
 
     <!-- Módulos -->
-    <script type="module" src="/src/js/modules/index.js"></script>
+    <script type="module" src="/finanzas-personales/src/js/modules/index.js"></script>
 
     <!-- Custom JavaScript -->
-    <script src="/src/js/sidebarmenu.js"></script>
-    <script src="/src/js/toolsScript.js"></script>
+    <script src="/finanzas-personales/src/js/sidebarmenu.js"></script>
+    <script src="/finanzas-personales/src/js/toolsScript.js"></script>
 
     <script>
         let pathArray = '', pagina = '', carpeta = '', configuracion = '';
@@ -65,7 +65,9 @@
     
         pathArray = window.location.pathname.substring(1).split('/');
         pathArray.splice(0, 1);
-    
+        pathArray.pop();
+        console.log(pathArray);
+
         console.log('Elementos del Path:');
         pathArray.forEach(pathElement => {
             console.log(pathElement);
