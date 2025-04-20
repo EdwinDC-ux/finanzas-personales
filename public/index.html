@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web que permite al usuario llevar un control de ingresos y gastos para una correcta administración de sus finanzas personales">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <!-- Ícono -->
+    <link rel="icon" href="/finanzas-personales/public/assets/images/personal-finance.png" type="image/png">
+    <title>Gestor de Ingresos y Gastos</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- JQuery-Confirm -->
+    <link rel="stylesheet" href="/node_modules/jquery-confirm/dist/jquery-confirm.min.css">
+    <!-- DataTable -->
+    <link rel="stylesheet" href="/node_modules/datatables.net-dt/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Custom css -->
+    <link rel="stylesheet" href="/finanzas-personales/public/assets/css/style.css">
+</head>
+<body>
+    <div id="pagina_principal"></div>
+    <div style="background-color: var(--primary); width: 100px; height: 100px;"></div>
+    <div style="background-color: var(--secondary); width: 100px; height: 100px;"></div>
+    <div style="background-color: var(--background); width: 100px; height: 100px;"></div>
+    <img src="/finanzas-personales/public/assets/images/personal-finance-bg.png" alt="" style="width: auto; height: 100vh;">
+    <img src="/finanzas-personales/public/assets/images/personal-finance.png" alt="" style="width: auto; height: 100vh;">
+
+    <!-- JQuery -->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- JQuery-Confirm -->
+    <script src="/node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+    <!-- DataTable -->
+    <script src="/node_modules/datatables.net/js/dataTables.min.js"></script>
+    <!-- JS-Render -->
+    <script src="/node_modules/jsrender/jsrender.min.js"></script>
+    <!-- Chart JS -->
+    <script src="/node_modules/chart.js/dist/chart.js"></script>
+
+    <!-- Módulos -->
+    <script type="module" src="/src/js/modules/index.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="/src/js/sidebarmenu.js"></script>
+    <script src="/src/js/toolsScript.js"></script>
+
+    <script>
+        let pathArray = '', pagina = '', carpeta = '', configuracion = '';
+        console.log(`href: ${window.location.href}`);
+        console.log(`protocol: ${window.location.protocol}`);
+        console.log(`hostname: ${window.location.hostname}`);
+        console.log(`host: ${window.location.host}`);
+        console.log(`origin: ${window.location.origin}`);
+        console.log(`username: ${window.location.username}`);
+        console.log(`password: ${window.location.password}`);
+        console.log(`port: ${window.location.port}`);
+        console.log(`pathname: ${window.location.pathname}`);
+        console.log(`hash: ${window.location.hash}`);
+        console.log(`search: ${window.location.search}`);
+    
+        pathArray = window.location.pathname.substring(1).split('/');
+        pathArray.splice(0, 1);
+    
+        console.log('Elementos del Path:');
+        pathArray.forEach(pathElement => {
+            console.log(pathElement);
+        });
+    </script>
+</body>
+</html>
