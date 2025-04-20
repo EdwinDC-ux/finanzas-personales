@@ -1,0 +1,13 @@
+#Librerias o modulos para omitir
+/node_modules
+/vendor
+/.idea
+/logs
+**/assets/files/
+
+#rutas de archivos
+/src/controller/MysqlController.php
+
+# Gestores de dependencias
+composer.lock
+package-lock.json
