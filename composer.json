@@ -1,0 +1,17 @@
+{
+    "name": "edwin/finanzas-personales",
+    "description": "Sistema para la administración de las finanzas personales",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Edwin Díaz Caballero",
+            "email": "edwin9602@gmail.com"
+        }
+    ],
+    "require": {}
+}
