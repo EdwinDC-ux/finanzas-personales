@@ -74,11 +74,10 @@ async function comprobarSesion () {
     .then(async sesion => {
         switch (sesion.ESTADO) {
             case 'Inactive':
-                if (location.pathname != `${PATH_ROOT}login/`) {
+                if (location.pathname != `${PATH_ROOT}login/` && location.pathname != `${PATH_ROOT}registro/` )
                     location.pathname = `${PATH_ROOT}login/`;
-                }
 
-                await redireccionar('login');
+                location.pathname == `${PATH_ROOT}login/` ? await redireccionar('login') : await redireccionar('registro');
 
                 break;
             case 'Active':
