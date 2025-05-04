@@ -4,6 +4,10 @@
     --background: #cfdebd;
     --gris: #98989a;
     --gris-bg: #6f7271;
+    --bs-btn-hover-bg: var(--background);
+    --bs-btn-hover-color: var(--primary);
+    --bs-btn-active-bg: var(--background);
+    --bs-btn-active-color: var(--primary);
 }
 
 body {
@@ -67,4 +71,37 @@ body {
         border-bottom: 16px var(--secondary) solid;
         border-left: 16px var(--secondary) solid;
     }
+}
+
+
+/**
+ * ============================================
+ * Página Login
+ * ============================================
+*/
+.main-wrapper {
+    height: 100vh;
+}
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+    min-height: 100%;
+}
+.modal-bg-img {
+    background: url(../images/personal-finance.png) no-repeat center center;
+    background-size: contain;
+}
+.form-container {
+    background-color: var(--gris);
+    box-shadow: 0 0 2rem var(--secondary);
+}
+.button-container {
+    margin-bottom: 2rem;
+}
+.primary-button {
+    background-color: var(--primary);
+    color: var(--background);
 }
