@@ -103,12 +103,12 @@ async function redireccionar(redireccion) {
     // Se obtiene el template de redirección
     await fetch(`${PATH_ROOT}src/html-required/${redireccion}.html`)
     .then(response=> response.text())
-    .then(data=> $('#carga_pagina').html(data));
+    .then(data=> $('#pagina_principal').html(data));
 
     // Nuevo script incrustado en el DOM
     nuevoScript = document.createElement('script');
     numeroAleatorio = Math.floor(Math.random() * 1000);
-    nuevoScript.src = `${PATH_ROOT}src/js/modules/${redireccion}/${redireccion}/${redireccion}.js?cache=${numeroAleatorio}`;
+    nuevoScript.src = `${PATH_ROOT}src/js/modules/${redireccion}/${redireccion}.js?cache=${numeroAleatorio}`;
     nuevoScript.type = 'module';
     document.body.appendChild(nuevoScript);
 }
