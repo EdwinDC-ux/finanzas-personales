@@ -3,9 +3,9 @@
  * =============================================================
 */
 const   PATH_ROOT = "/finanzas-personales/"
-        MAIN_DEFAULT = `${PATH_ROOT}src/controller/MainController.php`,
+        MAIN_DEFAULT = `${PATH_ROOT}src/api/Main.php`,
         DATATABLE = { "LANGUAJE": `${PATH_ROOT}src/js/json/datatables-es-MX.json`, "URL_LANGUAJE": { url: `${PATH_ROOT}src/js/json/datatables-es-MX.json` } },
-        LOADER = "<div class='d-flex justify-content-center my-5 py-5'><div class='loader-circle'></div></div>";
+        LOADER = "<div id='loader' class='d-flex justify-content-center align-items-center'><div class='loader-circle'></div></div>";
 
 /** ============================================================
  * @description Ejecuta una petición asincrona en método post.
@@ -54,7 +54,7 @@ async function RunFetchPost(url = '', formData = {}, type = 'json') {
  * @returns
  * =============================================================
 */
- function getFormData(object) {
+function getFormData(object) {
     return Object.keys(object).reduce((formData, key) => {
         formData.append(key, object[key]);
 
@@ -66,14 +66,12 @@ async function RunFetchPost(url = '', formData = {}, type = 'json') {
  * @function comprobarSesion
  * @description Validación de la sesión de un usuario.
  * =============================================================
- * ! Este método no funciona correctamente debido a la falta de la clase solicitada y del main_default
 */
 async function comprobarSesion () {
-    const formData = {"Class": 'SystemController','Action': 'comprobarSesion'};
-    let sesion = {"ESTADO": 'Active'};
-    //await RunFetchPost(`${MAIN_DEFAULT}`, formData)
-    //.then(async sesion => {
-        console.log(sesion);
+    const formData = {"Class": 'Sistema','Action': 'comprobarSesion'};
+
+    await RunFetchPost(`${MAIN_DEFAULT}`, formData)
+    .then(async sesion => {
         switch (sesion.ESTADO) {
             case 'Inactive':
                 if (location.pathname != `${PATH_ROOT}login/`) {
@@ -90,7 +88,7 @@ async function comprobarSesion () {
 
                 break;
         }
-    //});
+    });
 }
 
 /** ============================================================
