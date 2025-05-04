@@ -8,6 +8,14 @@
 
 body {
     background-color: var(--background);
+    height: 100vh;
+}
+
+#pagina_principal {
+    height: 100%;
+}
+#loader {
+    height: 100%;
 }
 
 /**
