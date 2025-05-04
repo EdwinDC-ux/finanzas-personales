@@ -4,15 +4,53 @@
     --background: #cfdebd;
     --gris: #98989a;
     --gris-bg: #6f7271;
+    --red: #ff0000;
     --bs-btn-hover-bg: var(--background);
     --bs-btn-hover-color: var(--primary);
     --bs-btn-active-bg: var(--background);
     --bs-btn-active-color: var(--primary);
 }
 
+*,*:before,*:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
 body {
     background-color: var(--background);
     height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 400;
+}
+a:hover {
+    text-decoration: underline;
+    color: var(--background);
+    font-weight: bold;
+    cursor: pointer;
+}
+a, p, label {
+    font-size: 12pt;
+}
+h1 {
+    font-size: 20pt;
+}
+h2 {
+    font-size: 17pt;
+}
+h3 {
+    font-size: 14pt;
+}
+button {
+    font-size: 16pt!important;
+}
+input {
+    font-size: 14pt!important;
 }
 
 #pagina_principal {
@@ -20,6 +58,13 @@ body {
 }
 #loader {
     height: 100%;
+}
+/* Solo se aplica a los labels que tienen la clase 'asterisco' */
+label.asterisco:after {
+    content: " *"; /* Agrega un asterisco */
+    color: var(--red);  
+    /* font-size: 1.3em; */
+    margin-left: 5px;
 }
 
 /**
@@ -76,7 +121,7 @@ body {
 
 /**
  * ============================================
- * Página Login
+ * Página Login y registro
  * ============================================
 */
 .main-wrapper {
@@ -87,21 +132,60 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    gap: 1rem;
     min-height: 100%;
 }
+.auth-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 70vw;
+    height: auto;
+    margin: 2rem 0 2rem 0;
+}
 .modal-bg-img {
-    background: url(../images/personal-finance.png) no-repeat center center;
     background-size: contain;
 }
+.modal-bg-img img {
+    width: 100%;
+    height: auto;
+}
 .form-container {
+    padding: 1rem;
     background-color: var(--gris);
     box-shadow: 0 0 2rem var(--secondary);
-}
-.button-container {
-    margin-bottom: 2rem;
+    width: 100%;
 }
 .primary-button {
     background-color: var(--primary);
     color: var(--background);
+}
+@media (min-width: 1024px) {
+    .auth-box {
+        flex-direction: row;
+        height: 50vh;
+    }
+    .auth-box_registro {
+        flex-direction: row-reverse;
+    }
+    .modal-bg-img {
+        width: 50%;
+    }
+    .form-container {
+        width: 50%;
+    }
+}
+@media (min-width: 1440px) {
+    .modal-bg-img {
+        height: 100%;
+        width: auto;
+    }
+    .modal-bg-img img {
+        height: 100%;
+        width: auto;
+    }
+    .form-container {
+        width: 40%;
+    }
 }
