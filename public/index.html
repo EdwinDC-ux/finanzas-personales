@@ -22,11 +22,6 @@
 </head>
 <body>
     <div id="pagina_principal"></div>
-    <!--<div style="background-color: var(--primary); width: 100px; height: 100px;"></div>
-    <div style="background-color: var(--secondary); width: 100px; height: 100px;"></div>
-    <div style="background-color: var(--background); width: 100px; height: 100px;"></div>
-    <img src="/finanzas-personales/public/assets/images/personal-finance-bg.png" alt="" style="width: auto; height: 100vh;">
-    <img src="/finanzas-personales/public/assets/images/personal-finance.png" alt="" style="width: auto; height: 100vh;">-->
 
     <!-- JQuery -->
     <script src="/finanzas-personales/node_modules/jquery/dist/jquery.min.js"></script>
@@ -48,30 +43,5 @@
     <!-- Custom JavaScript -->
     <script src="/finanzas-personales/src/js/sidebarmenu.js"></script>
     <script src="/finanzas-personales/src/js/toolsScript.js"></script>
-
-    <script>
-        let pathArray = '', pagina = '', carpeta = '', configuracion = '';
-        console.log(`href: ${window.location.href}`);
-        console.log(`protocol: ${window.location.protocol}`);
-        console.log(`hostname: ${window.location.hostname}`);
-        console.log(`host: ${window.location.host}`);
-        console.log(`origin: ${window.location.origin}`);
-        console.log(`username: ${window.location.username}`);
-        console.log(`password: ${window.location.password}`);
-        console.log(`port: ${window.location.port}`);
-        console.log(`pathname: ${window.location.pathname}`);
-        console.log(`hash: ${window.location.hash}`);
-        console.log(`search: ${window.location.search}`);
-    
-        pathArray = window.location.pathname.substring(1).split('/');
-        pathArray.splice(0, 1);
-        pathArray.pop();
-        console.log(pathArray);
-
-        console.log('Elementos del Path:');
-        pathArray.forEach(pathElement => {
-            console.log(pathElement);
-        });
-    </script>
 </body>
 </html>
