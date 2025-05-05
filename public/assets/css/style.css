@@ -46,8 +46,11 @@ h2 {
 h3 {
     font-size: 14pt;
 }
+div {
+    font-size: 12pt;
+}
 button {
-    font-size: 16pt!important;
+    font-size: 14pt!important;
 }
 input {
     font-size: 14pt!important;
